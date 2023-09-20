@@ -19,7 +19,8 @@ var imageElement = document.querySelector('img[src="images/placeholder.png"]');
 
 /* Step 4 - Adding Content */
 
-
+nameElement.innerHTML = `<strong>${fullName}</strong>`;
+yearElement.textContent = currentYear;
 
 
 
