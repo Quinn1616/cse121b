@@ -26,18 +26,18 @@ imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 
 /* Step 5 - Array */
 
-const foods = ['tacos', 'burgers', 'ramen'];
-foodElement.innerHTML = foods.join("<br>");
+var foods = ['tacos', 'burgers', 'ramen'];
+foodElement.innerHTML = foods.join(", ");
 
 var singleFood = "brownies";
 foods.push(singleFood);
 
-foodElement.innerHTML += `<br>${foods.join("<br>")}`;
+foodElement.innerHTML += `<br>${foods}`;
 foods.shift();
 
-foodElement.innerHTML += `<br>${foods.join("<br>")}`;
+foodElement.innerHTML += `<br>${foods}`;
 foods.pop();
-foodElement.innerHTML += `<br>${foods.join("<br>")}`;
+foodElement.innerHTML += `<br>${foods}`;
 
 
 
