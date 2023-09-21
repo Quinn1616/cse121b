@@ -4,16 +4,15 @@
 
 /* Step 2 - Variables */
 const fullName = "Quinn Bastian";
-var currentYear = "2023";
-var profilePicture = "images/Quinn.jpg"
+const currentYear = new Date().getFullYear();
+const profilePicture = "images/Quinn.jpg";
 
 /* Step 3 - Element Variables */
 
 const nameElement = document.getElementById("name");
 const foodElement = document.getElementById("food");
 const yearElement = document.querySelector("#year");
-
-var imageElement = document.querySelector('img[src="images/placeholder.png"]');
+const imageElement = document.querySelector("img");
 
 
 
@@ -21,14 +20,24 @@ var imageElement = document.querySelector('img[src="images/placeholder.png"]');
 
 nameElement.innerHTML = `<strong>${fullName}</strong>`;
 yearElement.textContent = currentYear;
-
-
+imageElement.setAttribute('src', profilePicture);
+imageElement.setAttribute('alt', `Profile image of ${fullName}`);
 
 
 /* Step 5 - Array */
 
+const foods = ['tacos', 'burgers', 'ramen'];
+foodElement.innerHTML = foods.join("<br>");
 
+var singleFood = "brownies";
+foods.push(singleFood);
 
+foodElement.innerHTML += `<br>${foods.join("<br>")}`;
+foods.shift();
+
+foodElement.innerHTML += `<br>${foods.join("<br>")}`;
+foods.pop();
+foodElement.innerHTML += `<br>${foods.join("<br>")}`;
 
 
 
