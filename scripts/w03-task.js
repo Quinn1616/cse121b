@@ -58,7 +58,7 @@ document.querySelector("#divideNumbers").addEventListener('click', divideNumbers
 /* ARRAY METHODS - Functional Programming */
 /* Output Source Array */
 
-let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+const numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
 document.querySelector('#array').innerHTML = numbersArray;
 
 /* Output Odds Only Array */
