@@ -37,10 +37,10 @@ const getTemples = async () => {
 
 /* reset Function */
 const reset = function () {
-    const templesElement = docment.querySelector("#div");
+    const templesElement = document.querySelector("#temples");
     const article = templesElement.querySelectorAll("article");
     article.forEach((articles) => {
-        templesElement.removeChile(articles);
+        templesElement.removeChild(articles);
     });
 };
 
@@ -55,7 +55,7 @@ const sortBy = function (temples) {
             displayTemples(utahTemples);
             break;
 
-        case 'nonutah':
+        case 'notutah':
             const nonUtahTemples = temples.filter(temple => !temple.location.includes('Utah'));
             displayTemples(nonUtahTemples);
             break;
@@ -66,13 +66,14 @@ const sortBy = function (temples) {
             break;
 
         case 'all':
-            displayTemples(temples)
+            displayTemples(temples);
             break;
 
         default:
+            break;
     }
-
 };
+
 
 getTemples();
 
