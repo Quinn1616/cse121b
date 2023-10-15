@@ -8,7 +8,7 @@ const templeList = [];
 
 const displayTemples = (temples) => {
 
-    templeList.forEach((temple) => {
+    temples.forEach((temple) => {
         const article = document.createElement("article");
 
         const h3 = document.createElement("h3");
@@ -61,7 +61,7 @@ const sortBy = function (temples) {
             break;
 
         case 'older':
-            const olderTemples = temples.filter(temple => new Date(temple.dedicatedDate) < new Date(1950, 0, 1));
+            const olderTemples = temples.filter(temple => new Date(temple.dedicated) < new Date(1950, 0, 1));
             displayTemples(olderTemples);
             break;
 
