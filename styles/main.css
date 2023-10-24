@@ -167,6 +167,38 @@ footer {
     bottom: 0;
 }
 
+#quoteContainer {
+    width: 400px;
+    max-width: 400px; /* Adjust the maximum width if needed */
+    max-height: none; /* Reset any max-height */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    overflow-y: auto; /* Enable vertical scrollbar if content exceeds container height */
+    white-space: normal; /* Allow text to wrap */
+    text-align: left; /* Adjust text alignment as needed */
+    margin: 0 auto; /* Center the content horizontally if needed */
+}
+
+#imageContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+#refreshButton {
+    border: none;
+    padding: 10px;
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
 /* Class Selectors */
 .active {
     border-bottom: 1px solid yellow;
@@ -199,14 +231,14 @@ footer {
 
 /* ID Selectors */
 
-#home {
+/* #home {
     margin-top: 125px;
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
     align-items: center;
     justify-content: center;
-}
+} */
 
 
 #section1 {
@@ -311,5 +343,6 @@ footer {
         margin: 0 auto;
         max-width: 950px;
     }
+      
 
 }
